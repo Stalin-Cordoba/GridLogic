@@ -28,9 +28,9 @@ import com.example.gridlogicprototipo.ui.theme.DarkPurple
 fun Exercise3Screen(onNext: () -> Unit, modifier: Modifier = Modifier) {
     var opcionSeleccionada by remember { mutableStateOf<Int?>(null) }
 
-    // Fila 1: Cruz, Luna, Rayo
-    // Fila 2: Luna, Rayo, Cruz
-    // Fila 3: Rayo, Cruz, [Luna]
+    // Fila 1: Cruz, luna, rayo
+    // Fila 2: Luna, rayo, cruz
+    // Fila 3: Rayo, cruz, luna
     val datosMatriz = listOf(
         listOf(Ex3Figura.CRUZ, Ex3Figura.LUNA, Ex3Figura.RAYO),
         listOf(Ex3Figura.LUNA, Ex3Figura.RAYO, Ex3Figura.CRUZ),
@@ -104,7 +104,7 @@ fun Exercise3Screen(onNext: () -> Unit, modifier: Modifier = Modifier) {
         }
 
         Text(
-            text = "Selecciona la pieza que falta",
+            text = "Seleccione la pieza que falta",
             color = Color.White,
             fontSize = 18.sp,
             modifier = Modifier.padding(vertical = 12.dp),
