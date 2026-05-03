@@ -51,15 +51,15 @@ fun HomeScreen(onGoToExercise1: () -> Unit, modifier: Modifier = Modifier) {
         Spacer(modifier = Modifier.height(35.dp))
 
         Text(
-            text = "Este es un test que evalúa tu capacidad de razonamiento. " +
-                    "Está basado en las matrices progresivas de Raven",
+            text = "Este es un test que evalúa su capacidad de razonamiento. " +
+                    "Está basado en las matrices progresivas de Raven.",
             fontSize = 18.sp,
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center,
             color = Color.White,
         )
 
-        Spacer(modifier = Modifier.height(20.dp))
+        Spacer(modifier = Modifier.height(24.dp))
 
         Text(
             text = "INSTRUCCIONES",
@@ -69,7 +69,7 @@ fun HomeScreen(onGoToExercise1: () -> Unit, modifier: Modifier = Modifier) {
             color = Color.White,
         )
 
-        Spacer(modifier = Modifier.height(8.dp))
+        Spacer(modifier = Modifier.height(12.dp))
 
         Card(
             shape = RoundedCornerShape(10.dp),
@@ -86,7 +86,7 @@ fun HomeScreen(onGoToExercise1: () -> Unit, modifier: Modifier = Modifier) {
                 Spacer(modifier = Modifier.height(8.dp))
 
                 Text(
-                    text = "1. En cada ejercicio, se le mostrará una matriz, la cual lleva consigo un patrón",
+                    text = "1. En cada ejercicio, se le mostrará una matriz, la cual lleva consigo un patrón.",
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Bold,
                     textAlign = TextAlign.Center,
@@ -96,7 +96,7 @@ fun HomeScreen(onGoToExercise1: () -> Unit, modifier: Modifier = Modifier) {
                 Spacer(modifier = Modifier.height(20.dp))
 
                 Text(
-                    text = "2. En cada matriz, hay una figura faltante al final",
+                    text = "2. En cada matriz, hay una figura faltante.",
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Bold,
                     textAlign = TextAlign.Center,
@@ -106,8 +106,9 @@ fun HomeScreen(onGoToExercise1: () -> Unit, modifier: Modifier = Modifier) {
                 Spacer(modifier = Modifier.height(20.dp))
 
                 Text(
-                    text = "3. Usted debe elegir entre las opciones, la figura que" +
-                            " tiene la mayor posibilidad de ser la faltante",
+                    text = "3. Usted debe elegir entre las diferentes " +
+                            "opciones, la figura que considere que sea " +
+                            "la faltante.",
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Bold,
                     textAlign = TextAlign.Center,
@@ -119,11 +120,12 @@ fun HomeScreen(onGoToExercise1: () -> Unit, modifier: Modifier = Modifier) {
         Spacer(modifier = Modifier.height(40.dp))
 
         Text(
-            text = "No hay límite de tiempo, por lo que puede ir a su ritmo",
+            text = "No hay límite de tiempo, por lo que puede ir a su ritmo.",
             fontSize = 24.sp,
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center,
             color = Color.White,
+            modifier = Modifier.padding(8.dp)
         )
 
         Spacer(modifier = Modifier.height(40.dp))
