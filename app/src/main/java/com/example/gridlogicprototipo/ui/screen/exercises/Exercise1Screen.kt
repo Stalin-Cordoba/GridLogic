@@ -101,7 +101,7 @@ fun Exercise1Screen(onNext: () -> Unit, modifier: Modifier = Modifier) {
         }
 
         Text(
-            text = "Selecciona la pieza que falta",
+            text = "Seleccione la pieza que falta",
             color = Color.White,
             fontSize = 18.sp,
             modifier = Modifier.padding(vertical = 12.dp),
