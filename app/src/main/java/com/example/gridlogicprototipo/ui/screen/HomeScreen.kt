@@ -24,7 +24,7 @@ import com.example.gridlogicprototipo.ui.theme.DarkPurple
 import com.example.gridlogicprototipo.ui.theme.DarkBlue
 
 @Composable
-fun HomeScreen(onGoToExercise1: () -> Unit, modifier: Modifier = Modifier) {
+fun HomeScreen(onEmpezar: () -> Unit, modifier: Modifier = Modifier) {
     Column(
         modifier = modifier
             .fillMaxSize()
@@ -106,9 +106,9 @@ fun HomeScreen(onGoToExercise1: () -> Unit, modifier: Modifier = Modifier) {
                 Spacer(modifier = Modifier.height(20.dp))
 
                 Text(
-                    text = "3. Usted debe elegir entre las diferentes " +
+                    text = "3. Debe elegir entre las diferentes " +
                             "opciones, la figura que considere que sea " +
-                            "la faltante.",
+                            "la que falta.",
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Bold,
                     textAlign = TextAlign.Center,
@@ -120,7 +120,7 @@ fun HomeScreen(onGoToExercise1: () -> Unit, modifier: Modifier = Modifier) {
         Spacer(modifier = Modifier.height(40.dp))
 
         Text(
-            text = "No hay límite de tiempo, por lo que puede ir a su ritmo.",
+            text = "Cuenta con un tiempo límite de 12 minutos para realizarlo.",
             fontSize = 24.sp,
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center,
@@ -130,7 +130,7 @@ fun HomeScreen(onGoToExercise1: () -> Unit, modifier: Modifier = Modifier) {
 
         Spacer(modifier = Modifier.height(40.dp))
 
-        Button(onClick = { onGoToExercise1() }) {
+        Button(onClick = { onEmpezar() }) {
             Text(text = "Empezar", textAlign = TextAlign.Center)
         }
     }

@@ -1,19 +1,19 @@
 package com.example.gridlogicprototipo.ui.model
 
-enum class Figura {
-    CUADRADO, CIRCULO, TRIANGULO, ESTRELLA, DIAMANTE, HEXAGONO, CRUZ, LUNA, RAYO
+enum class Dificultad {
+    FACIL, INTERMEDIO, DIFICIL
 }
 
 data class Opcion(
     val id: Int,
-    val tipoFigura: Figura,
+    val imagenResId: Int,
     val etiqueta: String
 )
 
 data class Ejercicio(
     val id: Int,
-    val titulo: String,
-    val matriz: List<List<Figura?>>,
+    val dificultad: Dificultad,
+    val imagenMatrizResId: Int,
     val opciones: List<Opcion>,
     val respuestaCorrectaId: Int
 )
