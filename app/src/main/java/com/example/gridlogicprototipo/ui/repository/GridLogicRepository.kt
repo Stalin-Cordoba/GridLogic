@@ -202,7 +202,5 @@ class GridLogicRepository {
             ),
             respuestaCorrectaId = 1
         ),
-
-
     )
 }

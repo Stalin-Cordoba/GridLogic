@@ -4,13 +4,13 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.gridlogicprototipo.ui.room_models.Exercise
+import com.example.gridlogicprototipo.ui.room_models.Puntajes
 
-@Database(entities = [Exercise::class], version = 1, exportSchema = false)
+@Database(entities = [Puntajes::class], version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
 
     // Definimos el acceso al DAO
-    abstract fun exerciseDao(): ExerciseDao
+    abstract fun PuntajesDao(): PuntajesDao
 
     companion object {
         @Volatile
