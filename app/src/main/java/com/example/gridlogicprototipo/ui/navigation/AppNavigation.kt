@@ -1,7 +1,10 @@
 package com.example.gridlogicprototipo.ui.navigation
 
+import android.app.Application
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -14,7 +17,11 @@ import com.example.gridlogicprototipo.ui.viewmodel.GridLogicViewModel
 @Composable
 fun AppNavigation(modifier: Modifier = Modifier) {
     val navController = rememberNavController()
-    val gridViewModel: GridLogicViewModel = viewModel()
+    val gridViewModel: GridLogicViewModel = viewModel(
+        factory = ViewModelProvider.AndroidViewModelFactory.getInstance(
+            LocalContext.current.applicationContext as Application
+        )
+    )
 
     NavHost(navController = navController, startDestination = Home) {
         composable<Home> {
@@ -44,6 +51,7 @@ fun AppNavigation(modifier: Modifier = Modifier) {
                         popUpTo(Home) { inclusive = true }
                     }
                 },
+                viewModel = gridViewModel,
                 modifier = modifier
             )
         }

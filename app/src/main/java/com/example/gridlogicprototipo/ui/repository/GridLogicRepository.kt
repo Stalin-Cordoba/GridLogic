@@ -1,11 +1,13 @@
 package com.example.gridlogicprototipo.ui.repository
 
 import com.example.gridlogicprototipo.R
+import com.example.gridlogicprototipo.ui.dao.PuntajesDao
 import com.example.gridlogicprototipo.ui.model.Dificultad
 import com.example.gridlogicprototipo.ui.model.Ejercicio
 import com.example.gridlogicprototipo.ui.model.Opcion
+import com.example.gridlogicprototipo.ui.room_models.Puntajes
 
-class GridLogicRepository {
+class GridLogicRepository(private val puntajesDao: PuntajesDao) {
 
     fun generarTestAleatorio(): List<Ejercicio> {
         val seleccionFacil = ejerciciosFaciles.shuffled().take(3)
@@ -203,4 +205,10 @@ class GridLogicRepository {
             respuestaCorrectaId = 1
         ),
     )
+
+    suspend fun guardarPuntajeRandom() {
+        val numeroAleatorio = (1..10).random()
+        val nuevoPuntaje = Puntajes(puntuacion = numeroAleatorio) // Asegúrate de que coincida con tu entidad Puntaje
+        puntajesDao.insertarPuntaje(nuevoPuntaje)
+    }
 }

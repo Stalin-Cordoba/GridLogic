@@ -20,9 +20,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.gridlogicprototipo.ui.theme.DarkPurple
 import com.example.gridlogicprototipo.ui.theme.Purple40
+import com.example.gridlogicprototipo.ui.viewmodel.GridLogicViewModel
 
 @Composable
-fun ResultsScreen(onGoHome: () -> Unit, modifier: Modifier = Modifier) {
+fun ResultsScreen(onGoHome: () -> Unit, viewModel: GridLogicViewModel, modifier: Modifier = Modifier) {
     Column(
         modifier = modifier
             .fillMaxSize()
@@ -47,6 +48,7 @@ fun ResultsScreen(onGoHome: () -> Unit, modifier: Modifier = Modifier) {
 
         Spacer(modifier = Modifier.height(24.dp))
 
+        // Resumen evaluación
         Text(
             text = "Resumen de Evaluación:",
             fontSize = 24.sp,
@@ -56,6 +58,7 @@ fun ResultsScreen(onGoHome: () -> Unit, modifier: Modifier = Modifier) {
 
         Spacer(modifier = Modifier.height(16.dp))
 
+        // Descripción
         Text(
             text = "Ha finalizado exitosamente los ejercicios de matrices progresivas. " +
                     "Para la version final, aquí verá su puntuación y un breve análisis de su capacidad visual-espacial"+
@@ -68,7 +71,10 @@ fun ResultsScreen(onGoHome: () -> Unit, modifier: Modifier = Modifier) {
 
         Spacer(modifier = Modifier.height(50.dp))
 
-        Button(onClick = { onGoHome() }) {
+        Button(onClick = {
+            viewModel.registrarPuntajeEnBD()
+            onGoHome()
+        }) {
             Text(text = "Volver a empezar", textAlign = TextAlign.Center, fontSize = 18.sp)
         }
     }

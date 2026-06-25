@@ -1,14 +1,23 @@
 package com.example.gridlogicprototipo.ui.viewmodel
 
+import android.app.Application
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.example.gridlogicprototipo.ui.dao.AppDatabase
+import com.example.gridlogicprototipo.ui.dao.PuntajesDao
 import com.example.gridlogicprototipo.ui.model.Ejercicio
 import com.example.gridlogicprototipo.ui.repository.GridLogicRepository
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
-class GridLogicViewModel: ViewModel() {
-    private val repository = GridLogicRepository()
+class GridLogicViewModel(application: Application) : AndroidViewModel(application) {
+
+    private val baseDatos = AppDatabase.getDatabase(application)
+    private val repository = GridLogicRepository(puntajesDao = baseDatos.PuntajesDao())
 
     var ejerciciosTest by mutableStateOf<List<Ejercicio>>(emptyList())
         private set
@@ -43,5 +52,17 @@ class GridLogicViewModel: ViewModel() {
 
     fun obtenerEjercicioActual(): Ejercicio? {
         return ejerciciosTest.getOrNull(indiceActual)
+    }
+
+    // Agrega esta función que será llamada desde la ResultsScreen
+    fun registrarPuntajeEnBD() {
+        viewModelScope.launch(Dispatchers.IO) {
+            try {
+                repository.guardarPuntajeRandom()
+            } catch (e: Exception) {
+                // Manejar error si la inserción falla (opcional)
+                e.printStackTrace()
+            }
+        }
     }
 }
