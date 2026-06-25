@@ -10,14 +10,14 @@ import com.example.gridlogicprototipo.ui.room_models.Puntajes
 interface PuntajesDao {
 
     @Query("SELECT * FROM puntuaciones")
-    fun obtenerTodosLosEjercicios(): List<Puntajes>
+    fun obtenerTodosLosPuntajes(): List<Puntajes>
 
     @Insert
-    fun insertarEjercicio(ejercicio: Puntajes)
+    fun insertarPuntaje(score: Puntajes)
 
     @Update
-    fun actualizarEjercicio(ejercicio: Puntajes)
+    fun actualizarPuntaje(score: Puntajes)
 
     @Query("DELETE FROM puntuaciones WHERE id = :id")
-    fun eliminarEjercicioPorId(id: Int)
+    fun eliminarPuntajePorId(id: Int)
 }
