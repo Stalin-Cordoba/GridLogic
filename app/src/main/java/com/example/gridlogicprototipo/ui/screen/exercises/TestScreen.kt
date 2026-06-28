@@ -12,6 +12,7 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush.Companion.verticalGradient
@@ -35,9 +36,12 @@ fun TestScreen(
     val preguntaNumero = viewModel.indiceActual + 1
     val totalPreguntas = viewModel.ejerciciosTest.size
 
-    if (ejercicioActual == null) {
+    if (ejercicioActual == null || totalPreguntas == 0) {
+        LaunchedEffect(Unit) {
+            onTestTerminado()
+        }
         Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-            Text("Cargando...", color = Color.White)
+            Text("Procesando resultados...", color = Color.White)
         }
         return
     }

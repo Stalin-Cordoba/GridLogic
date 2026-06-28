@@ -1,13 +1,13 @@
 package com.example.gridlogicprototipo.ui.repository
 
 import com.example.gridlogicprototipo.R
-import com.example.gridlogicprototipo.ui.dao.PuntajesDao
+import com.example.gridlogicprototipo.ui.dao.ScoresDao
 import com.example.gridlogicprototipo.ui.model.Dificultad
 import com.example.gridlogicprototipo.ui.model.Ejercicio
 import com.example.gridlogicprototipo.ui.model.Opcion
-import com.example.gridlogicprototipo.ui.room_models.Puntajes
+import com.example.gridlogicprototipo.ui.room_models.Scores
 
-class GridLogicRepository(private val puntajesDao: PuntajesDao) {
+class GridLogicRepository(private val puntajesDao: ScoresDao) {
 
     fun generarTestAleatorio(): List<Ejercicio> {
         val seleccionFacil = ejerciciosFaciles.shuffled().take(3)
@@ -31,6 +31,11 @@ class GridLogicRepository(private val puntajesDao: PuntajesDao) {
             opciones = opciones,
             respuestaCorrectaId = respuestaCorrectaId
         )
+    }
+
+    suspend fun guardarPuntajeFinal(puntajeCalculado: Int) {
+        val nuevoPuntaje = Scores(puntuacion = puntajeCalculado)
+        puntajesDao.insertarPuntaje(nuevoPuntaje)
     }
 
     private val ejerciciosFaciles = listOf(
@@ -205,10 +210,4 @@ class GridLogicRepository(private val puntajesDao: PuntajesDao) {
             respuestaCorrectaId = 1
         ),
     )
-
-    suspend fun guardarPuntajeRandom() {
-        val numeroAleatorio = (1..10).random()
-        val nuevoPuntaje = Puntajes(puntuacion = numeroAleatorio) // Asegúrate de que coincida con tu entidad Puntaje
-        puntajesDao.insertarPuntaje(nuevoPuntaje)
-    }
 }

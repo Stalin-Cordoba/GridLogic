@@ -4,7 +4,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "puntuaciones")
-data class Puntajes (
+data class Scores (
     @PrimaryKey(autoGenerate = true) val id: Int = 0,
     val puntuacion: Int
 )
