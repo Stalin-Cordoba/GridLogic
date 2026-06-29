@@ -85,6 +85,95 @@ class GridLogicRepository(private val puntajesDao: ScoresDao) {
             respuestaCorrectaId = 1
         ),
 
+        crearEjercicio(
+            id = 4,
+            dificultad = Dificultad.FACIL,
+            imagenMatrizResId = R.drawable.matriz_facil_4,
+            opciones = listOf(
+                Opcion(1, R.drawable.opcion_f4_a, "1"),
+                Opcion(2, R.drawable.opcion_f4_b, "2"),
+                Opcion(3, R.drawable.opcion_f4_c, "3"),
+                Opcion(4, R.drawable.opcion_f4_d, "4"),
+                Opcion(5, R.drawable.opcion_f4_e, "5"),
+                Opcion(6, R.drawable.opcion_f4_f, "6")
+            ),
+            respuestaCorrectaId = 2
+        ),
+
+        crearEjercicio(
+            id = 5,
+            dificultad = Dificultad.FACIL,
+            imagenMatrizResId = R.drawable.matriz_facil_5,
+            opciones = listOf(
+                Opcion(1, R.drawable.opcion_f5_a, "1"),
+                Opcion(2, R.drawable.opcion_f5_b, "2"),
+                Opcion(3, R.drawable.opcion_f5_c, "3"),
+                Opcion(4, R.drawable.opcion_f5_d, "4"),
+                Opcion(5, R.drawable.opcion_f5_e, "5"),
+                Opcion(6, R.drawable.opcion_f5_f, "6")
+            ),
+            respuestaCorrectaId = 6
+        ),
+
+        crearEjercicio(
+            id = 6,
+            dificultad = Dificultad.FACIL,
+            imagenMatrizResId = R.drawable.matriz_facil_6,
+            opciones = listOf(
+                Opcion(1, R.drawable.opcion_f6_a, "1"),
+                Opcion(2, R.drawable.opcion_f6_b, "2"),
+                Opcion(3, R.drawable.opcion_f6_c, "3"),
+                Opcion(4, R.drawable.opcion_f6_d, "4"),
+                Opcion(5, R.drawable.opcion_f6_e, "5"),
+                Opcion(6, R.drawable.opcion_f6_f, "6")
+            ),
+            respuestaCorrectaId = 6
+        ),
+
+        crearEjercicio(
+            id = 7,
+            dificultad = Dificultad.FACIL,
+            imagenMatrizResId = R.drawable.matriz_facil_7,
+            opciones = listOf(
+                Opcion(1, R.drawable.opcion_f7_a, "1"),
+                Opcion(2, R.drawable.opcion_f7_b, "2"),
+                Opcion(3, R.drawable.opcion_f7_c, "3"),
+                Opcion(4, R.drawable.opcion_f7_d, "4"),
+                Opcion(5, R.drawable.opcion_f7_e, "5"),
+                Opcion(6, R.drawable.opcion_f7_f, "6")
+            ),
+            respuestaCorrectaId = 3
+        ),
+
+        crearEjercicio(
+            id = 8,
+            dificultad = Dificultad.FACIL,
+            imagenMatrizResId = R.drawable.matriz_facil_8,
+            opciones = listOf(
+                Opcion(1, R.drawable.opcion_f8_a, "1"),
+                Opcion(2, R.drawable.opcion_f8_b, "2"),
+                Opcion(3, R.drawable.opcion_f8_c, "3"),
+                Opcion(4, R.drawable.opcion_f8_d, "4"),
+                Opcion(5, R.drawable.opcion_f8_e, "5"),
+                Opcion(6, R.drawable.opcion_f8_f, "6")
+            ),
+            respuestaCorrectaId = 1
+        ),
+
+        crearEjercicio(
+            id = 9,
+            dificultad = Dificultad.FACIL,
+            imagenMatrizResId = R.drawable.matriz_facil_9,
+            opciones = listOf(
+                Opcion(1, R.drawable.opcion_f9_a, "1"),
+                Opcion(2, R.drawable.opcion_f9_b, "2"),
+                Opcion(3, R.drawable.opcion_f9_c, "3"),
+                Opcion(4, R.drawable.opcion_f9_d, "4"),
+                Opcion(5, R.drawable.opcion_f9_e, "5"),
+                Opcion(6, R.drawable.opcion_f9_f, "6")
+            ),
+            respuestaCorrectaId = 4
+        ),
 
     )
 
@@ -154,6 +243,139 @@ class GridLogicRepository(private val puntajesDao: ScoresDao) {
             respuestaCorrectaId = 3
         ),
 
+        crearEjercicio(
+            id = 14,
+            dificultad = Dificultad.INTERMEDIO,
+            imagenMatrizResId = R.drawable.matriz_intermedia_5,
+            opciones = listOf(
+                Opcion(1, R.drawable.opcion_i5_a, "1"),
+                Opcion(2, R.drawable.opcion_i5_b, "2"),
+                Opcion(3, R.drawable.opcion_i5_c, "3"),
+                Opcion(4, R.drawable.opcion_i5_d, "4"),
+                Opcion(5, R.drawable.opcion_i5_e, "5"),
+                Opcion(6, R.drawable.opcion_i5_f, "6")
+            ),
+            respuestaCorrectaId = 4
+        ),
+
+        crearEjercicio(
+            id = 15,
+            dificultad = Dificultad.INTERMEDIO,
+            imagenMatrizResId = R.drawable.matriz_intermedia_6,
+            opciones = listOf(
+                Opcion(1, R.drawable.opcion_i6_a, "1"),
+                Opcion(2, R.drawable.opcion_i6_b, "2"),
+                Opcion(3, R.drawable.opcion_i6_c, "3"),
+                Opcion(4, R.drawable.opcion_i6_d, "4"),
+                Opcion(5, R.drawable.opcion_i6_e, "5"),
+                Opcion(6, R.drawable.opcion_i6_f, "6"),
+                Opcion(7, R.drawable.opcion_i6_g, "7"),
+                Opcion(8, R.drawable.opcion_i6_h, "8")
+            ),
+            respuestaCorrectaId = 5
+        ),
+
+        crearEjercicio(
+            id = 16,
+            dificultad = Dificultad.INTERMEDIO,
+            imagenMatrizResId = R.drawable.matriz_intermedia_7,
+            opciones = listOf(
+                Opcion(1, R.drawable.opcion_i7_a, "1"),
+                Opcion(2, R.drawable.opcion_i7_b, "2"),
+                Opcion(3, R.drawable.opcion_i7_c, "3"),
+                Opcion(4, R.drawable.opcion_i7_d, "4"),
+                Opcion(5, R.drawable.opcion_i7_e, "5"),
+                Opcion(6, R.drawable.opcion_i7_f, "6"),
+                Opcion(7, R.drawable.opcion_i7_g, "7"),
+                Opcion(8, R.drawable.opcion_i7_h, "8")
+            ),
+            respuestaCorrectaId = 4
+        ),
+
+        crearEjercicio(
+            id = 17,
+            dificultad = Dificultad.INTERMEDIO,
+            imagenMatrizResId = R.drawable.matriz_intermedia_8,
+            opciones = listOf(
+                Opcion(1, R.drawable.opcion_i8_a, "1"),
+                Opcion(2, R.drawable.opcion_i8_b, "2"),
+                Opcion(3, R.drawable.opcion_i8_c, "3"),
+                Opcion(4, R.drawable.opcion_i8_d, "4"),
+                Opcion(5, R.drawable.opcion_i8_e, "5"),
+                Opcion(6, R.drawable.opcion_i8_f, "6"),
+                Opcion(7, R.drawable.opcion_i8_g, "7"),
+                Opcion(8, R.drawable.opcion_i8_h, "8")
+            ),
+            respuestaCorrectaId = 3
+        ),
+
+        crearEjercicio(
+            id = 18,
+            dificultad = Dificultad.INTERMEDIO,
+            imagenMatrizResId = R.drawable.matriz_intermedia_9,
+            opciones = listOf(
+                Opcion(1, R.drawable.opcion_i9_a, "1"),
+                Opcion(2, R.drawable.opcion_i9_b, "2"),
+                Opcion(3, R.drawable.opcion_i9_c, "3"),
+                Opcion(4, R.drawable.opcion_i9_d, "4"),
+                Opcion(5, R.drawable.opcion_i9_e, "5"),
+                Opcion(6, R.drawable.opcion_i9_f, "6"),
+                Opcion(7, R.drawable.opcion_i9_g, "7"),
+                Opcion(8, R.drawable.opcion_i9_h, "8")
+            ),
+            respuestaCorrectaId = 6
+        ),
+
+        crearEjercicio(
+            id = 19,
+            dificultad = Dificultad.INTERMEDIO,
+            imagenMatrizResId = R.drawable.matriz_intermedia_10,
+            opciones = listOf(
+                Opcion(1, R.drawable.opcion_i10_a, "1"),
+                Opcion(2, R.drawable.opcion_i10_b, "2"),
+                Opcion(3, R.drawable.opcion_i10_c, "3"),
+                Opcion(4, R.drawable.opcion_i10_d, "4"),
+                Opcion(5, R.drawable.opcion_i10_e, "5"),
+                Opcion(6, R.drawable.opcion_i10_f, "6"),
+                Opcion(7, R.drawable.opcion_i10_g, "7"),
+                Opcion(8, R.drawable.opcion_i10_h, "8")
+            ),
+            respuestaCorrectaId = 8
+        ),
+
+        crearEjercicio(
+            id = 20,
+            dificultad = Dificultad.INTERMEDIO,
+            imagenMatrizResId = R.drawable.matriz_intermedia_11,
+            opciones = listOf(
+                Opcion(1, R.drawable.opcion_i11_a, "1"),
+                Opcion(2, R.drawable.opcion_i11_b, "2"),
+                Opcion(3, R.drawable.opcion_i11_c, "3"),
+                Opcion(4, R.drawable.opcion_i11_d, "4"),
+                Opcion(5, R.drawable.opcion_i11_e, "5"),
+                Opcion(6, R.drawable.opcion_i11_f, "6"),
+                Opcion(7, R.drawable.opcion_i11_g, "7"),
+                Opcion(8, R.drawable.opcion_i11_h, "8")
+            ),
+            respuestaCorrectaId = 8
+        ),
+
+        crearEjercicio(
+            id = 21,
+            dificultad = Dificultad.INTERMEDIO,
+            imagenMatrizResId = R.drawable.matriz_intermedia_12,
+            opciones = listOf(
+                Opcion(1, R.drawable.opcion_i12_a, "1"),
+                Opcion(2, R.drawable.opcion_i12_b, "2"),
+                Opcion(3, R.drawable.opcion_i12_c, "3"),
+                Opcion(4, R.drawable.opcion_i12_d, "4"),
+                Opcion(5, R.drawable.opcion_i12_e, "5"),
+                Opcion(6, R.drawable.opcion_i12_f, "6"),
+                Opcion(7, R.drawable.opcion_i12_g, "7"),
+                Opcion(8, R.drawable.opcion_i12_h, "8")
+            ),
+            respuestaCorrectaId = 6
+        ),
 
     )
 
@@ -206,6 +428,108 @@ class GridLogicRepository(private val puntajesDao: ScoresDao) {
                 Opcion(6, R.drawable.opcion_d3_f, "6"),
                 Opcion(7, R.drawable.opcion_d3_g, "7"),
                 Opcion(8, R.drawable.opcion_d3_h, "8")
+            ),
+            respuestaCorrectaId = 1
+        ),
+
+        crearEjercicio(
+            id = 25,
+            dificultad = Dificultad.DIFICIL,
+            imagenMatrizResId = R.drawable.matriz_dificil_4,
+            opciones = listOf(
+                Opcion(1, R.drawable.opcion_d4_a, "1"),
+                Opcion(2, R.drawable.opcion_d4_b, "2"),
+                Opcion(3, R.drawable.opcion_d4_c, "3"),
+                Opcion(4, R.drawable.opcion_d4_d, "4"),
+                Opcion(5, R.drawable.opcion_d4_e, "5"),
+                Opcion(6, R.drawable.opcion_d4_f, "6"),
+                Opcion(7, R.drawable.opcion_d4_g, "7"),
+                Opcion(8, R.drawable.opcion_d4_h, "8")
+            ),
+            respuestaCorrectaId = 5
+        ),
+
+        crearEjercicio(
+            id = 26,
+            dificultad = Dificultad.DIFICIL,
+            imagenMatrizResId = R.drawable.matriz_dificil_5,
+            opciones = listOf(
+                Opcion(1, R.drawable.opcion_d5_a, "1"),
+                Opcion(2, R.drawable.opcion_d5_b, "2"),
+                Opcion(3, R.drawable.opcion_d5_c, "3"),
+                Opcion(4, R.drawable.opcion_d5_d, "4"),
+                Opcion(5, R.drawable.opcion_d5_e, "5"),
+                Opcion(6, R.drawable.opcion_d5_f, "6"),
+                Opcion(7, R.drawable.opcion_d5_g, "7"),
+                Opcion(8, R.drawable.opcion_d5_h, "8")
+            ),
+            respuestaCorrectaId = 7
+        ),
+
+        crearEjercicio(
+            id = 27,
+            dificultad = Dificultad.DIFICIL,
+            imagenMatrizResId = R.drawable.matriz_dificil_6,
+            opciones = listOf(
+                Opcion(1, R.drawable.opcion_d6_a, "1"),
+                Opcion(2, R.drawable.opcion_d6_b, "2"),
+                Opcion(3, R.drawable.opcion_d6_c, "3"),
+                Opcion(4, R.drawable.opcion_d6_d, "4"),
+                Opcion(5, R.drawable.opcion_d6_e, "5"),
+                Opcion(6, R.drawable.opcion_d6_f, "6"),
+                Opcion(7, R.drawable.opcion_d6_g, "7"),
+                Opcion(8, R.drawable.opcion_d6_h, "8")
+            ),
+            respuestaCorrectaId = 5
+        ),
+
+        crearEjercicio(
+            id = 28,
+            dificultad = Dificultad.DIFICIL,
+            imagenMatrizResId = R.drawable.matriz_dificil_7,
+            opciones = listOf(
+                Opcion(1, R.drawable.opcion_d7_a, "1"),
+                Opcion(2, R.drawable.opcion_d7_b, "2"),
+                Opcion(3, R.drawable.opcion_d7_c, "3"),
+                Opcion(4, R.drawable.opcion_d7_d, "4"),
+                Opcion(5, R.drawable.opcion_d7_e, "5"),
+                Opcion(6, R.drawable.opcion_d7_f, "6"),
+                Opcion(7, R.drawable.opcion_d7_g, "7"),
+                Opcion(8, R.drawable.opcion_d7_h, "8")
+            ),
+            respuestaCorrectaId = 7
+        ),
+
+        crearEjercicio(
+            id = 29,
+            dificultad = Dificultad.DIFICIL,
+            imagenMatrizResId = R.drawable.matriz_dificil_8,
+            opciones = listOf(
+                Opcion(1, R.drawable.opcion_d8_a, "1"),
+                Opcion(2, R.drawable.opcion_d8_b, "2"),
+                Opcion(3, R.drawable.opcion_d8_c, "3"),
+                Opcion(4, R.drawable.opcion_d8_d, "4"),
+                Opcion(5, R.drawable.opcion_d8_e, "5"),
+                Opcion(6, R.drawable.opcion_d8_f, "6"),
+                Opcion(7, R.drawable.opcion_d8_g, "7"),
+                Opcion(8, R.drawable.opcion_d8_h, "8")
+            ),
+            respuestaCorrectaId = 8
+        ),
+
+        crearEjercicio(
+            id = 30,
+            dificultad = Dificultad.DIFICIL,
+            imagenMatrizResId = R.drawable.matriz_dificil_9,
+            opciones = listOf(
+                Opcion(1, R.drawable.opcion_d9_a, "1"),
+                Opcion(2, R.drawable.opcion_d9_b, "2"),
+                Opcion(3, R.drawable.opcion_d9_c, "3"),
+                Opcion(4, R.drawable.opcion_d9_d, "4"),
+                Opcion(5, R.drawable.opcion_d9_e, "5"),
+                Opcion(6, R.drawable.opcion_d9_f, "6"),
+                Opcion(7, R.drawable.opcion_d9_g, "7"),
+                Opcion(8, R.drawable.opcion_d9_h, "8")
             ),
             respuestaCorrectaId = 1
         ),
