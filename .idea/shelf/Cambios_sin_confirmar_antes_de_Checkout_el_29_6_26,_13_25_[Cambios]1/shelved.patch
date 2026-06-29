@@ -1,0 +1,18 @@
+Index: .idea/planningMode.xml
+===================================================================
+diff --git a/.idea/planningMode.xml b/.idea/planningMode.xml
+new file mode 100644
+--- /dev/null	(date 1782750982189)
++++ b/.idea/planningMode.xml	(date 1782750982189)
+@@ -0,0 +1,10 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="PlanningModeManager">
++    <option name="approvalStates">
++      <map>
++        <entry key="20260622-141310-0a00b251-b4b1-42d3-bd10-924185be3b0c" value="true" />
++      </map>
++    </option>
++  </component>
++</project>
+\ No newline at end of file
