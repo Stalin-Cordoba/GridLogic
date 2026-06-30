@@ -12,8 +12,11 @@ interface ScoresDao {
     @Query("SELECT * FROM puntuaciones")
     fun obtenerTodosLosPuntajes(): List<Scores>
 
+    @Query("SELECT * FROM puntuaciones ORDER BY id DESC")
+    suspend fun obtenerHistorialPuntajes(): List<Scores>
+
     @Insert
-    fun insertarPuntaje(score: Scores)
+    suspend fun insertarPuntaje(score: Scores)
 
     @Update
     fun actualizarPuntaje(score: Scores)

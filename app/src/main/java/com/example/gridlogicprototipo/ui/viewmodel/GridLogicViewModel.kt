@@ -10,6 +10,7 @@ import com.example.gridlogicprototipo.ui.dao.AppDatabase
 import com.example.gridlogicprototipo.ui.model.Dificultad
 import com.example.gridlogicprototipo.ui.model.Ejercicio
 import com.example.gridlogicprototipo.ui.repository.GridLogicRepository
+import com.example.gridlogicprototipo.ui.room_models.Scores
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
@@ -42,6 +43,9 @@ class GridLogicViewModel(application: Application) : AndroidViewModel(applicatio
     private var segundosTotalesRestantes = 12 * 60
     private var tiempoInicioEjercicioActual: Long = 0
     private var testFinalizadoPorSeguridad = false
+
+    var historialPuntajes by mutableStateOf<List<Scores>>(emptyList())
+        private set
 
     fun iniciarTest() {
         ejerciciosTest = repository.generarTestAleatorio()
@@ -156,8 +160,11 @@ class GridLogicViewModel(application: Application) : AndroidViewModel(applicatio
     fun registrarPuntajeEnBD() {
         viewModelScope.launch(Dispatchers.IO) {
             try {
-                // Guardado del puntaje obtenido
+                // Guarda el puntaje de la partida que acaba de terminar
                 repository.guardarPuntajeFinal(puntuacionFinal)
+
+                // Consulta a la BD y se actualiza la lista del historial
+                historialPuntajes = repository.obtenerHistorial()
             } catch (e: Exception) {
                 e.printStackTrace()
             }
