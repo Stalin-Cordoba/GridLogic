@@ -38,6 +38,10 @@ class GridLogicRepository(private val puntajesDao: ScoresDao) {
         puntajesDao.insertarPuntaje(nuevoPuntaje)
     }
 
+    suspend fun obtenerHistorial(): List<Scores>{
+        return puntajesDao.obtenerHistorialPuntajes()
+    }
+
     private val ejerciciosFaciles = listOf(
 
         crearEjercicio(

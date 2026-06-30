@@ -1,14 +1,17 @@
 package com.example.gridlogicprototipo.ui.screen
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -74,19 +77,21 @@ fun HomeScreen(onEmpezar: () -> Unit, modifier: Modifier = Modifier) {
         Card(
             shape = RoundedCornerShape(10.dp),
             modifier = Modifier
-                .height(230.dp)
+                .fillMaxWidth()
                 .padding(horizontal = 22.dp),
+            colors = CardDefaults.cardColors(containerColor = DarkBlue)
         ) {
             Column(
                 modifier = Modifier
-                    .fillMaxSize()
-                    .background(DarkBlue),
+                    .fillMaxWidth()
+                    .padding(horizontal = 24.dp, vertical = 12.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.spacedBy(4.dp)
             ) {
                 Spacer(modifier = Modifier.height(8.dp))
 
                 Text(
-                    text = "1. En cada ejercicio, se le mostrará una matriz, la cual lleva consigo un patrón.",
+                    text = "1. Cada ejercicio presenta una matriz visual que obedece a un patrón lógico espacial.",
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Bold,
                     textAlign = TextAlign.Center,
@@ -96,7 +101,7 @@ fun HomeScreen(onEmpezar: () -> Unit, modifier: Modifier = Modifier) {
                 Spacer(modifier = Modifier.height(20.dp))
 
                 Text(
-                    text = "2. En cada matriz, hay una figura faltante.",
+                    text = "2. Observará que a la matriz le hace falta una pieza para estar completa.",
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Bold,
                     textAlign = TextAlign.Center,
@@ -106,9 +111,7 @@ fun HomeScreen(onEmpezar: () -> Unit, modifier: Modifier = Modifier) {
                 Spacer(modifier = Modifier.height(20.dp))
 
                 Text(
-                    text = "3. Debe elegir entre las diferentes " +
-                            "opciones, la figura que considere que sea " +
-                            "la que falta.",
+                    text = "3. Seleccione entre las opciones inferiores la figura que deduzca que completa correctamente la secuencia.",
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Bold,
                     textAlign = TextAlign.Center,
@@ -117,10 +120,10 @@ fun HomeScreen(onEmpezar: () -> Unit, modifier: Modifier = Modifier) {
             }
         }
 
-        Spacer(modifier = Modifier.height(40.dp))
+        Spacer(modifier = Modifier.height(24.dp))
 
         Text(
-            text = "Cuenta con un tiempo límite de 12 minutos para realizarlo.",
+            text = "Cuenta con un tiempo límite de 12 minutos para completar el test.",
             fontSize = 24.sp,
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center,
@@ -128,7 +131,7 @@ fun HomeScreen(onEmpezar: () -> Unit, modifier: Modifier = Modifier) {
             modifier = Modifier.padding(8.dp)
         )
 
-        Spacer(modifier = Modifier.height(40.dp))
+        Spacer(modifier = Modifier.height(24.dp))
 
         Button(onClick = { onEmpezar() }) {
             Text(text = "Empezar", textAlign = TextAlign.Center)
